@@ -6,6 +6,13 @@
         {
             return
             [
+                new RedLine(),
+                new RedLine(),
+                new RedLine(),
+                new RedLine(),
+                new RedLine(),
+                new RedLine(),
+                new RedLine()
             ];
         }
     }
