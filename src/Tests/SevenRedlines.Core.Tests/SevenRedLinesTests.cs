@@ -4,12 +4,14 @@ namespace SevenRedLines.Core.Tests
 {
     public class SevenRedLinesTests
     {
-        [Fact]
-        public void Generate_ShouldCreateSeven()
+        [Theory]
+        [InlineData(7)]
+        [InlineData(5)]
+        [InlineData(0)]
+        public void Generate_ShouldCreateSeven(uint redLinesCount)
         {
-            const int redLinesCount = 7;
             var redLineGenerator = new RedLineGenerator();
-            var redLines = redLineGenerator.Generate();
+            var redLines = redLineGenerator.Generate(redLinesCount);
             Assert.Equal(redLinesCount, redLines.Count);
         }
     }

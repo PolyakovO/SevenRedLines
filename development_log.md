@@ -22,3 +22,4 @@ This sets us up to proceed methodically, addressing one part of the task at a ti
     2. Let's make the test build. Still Red.
     3. Let's make the test pass. Green!
     4. We’re refactoring the code; it’s improved, but now there’s duplication with var redLinesCount = 7;. We’ll resolve this, starting with the test.
+    5. We’ll perform Red -> Green -> Refactoring again, adding redLinesCount as an argument to the Generate method.
