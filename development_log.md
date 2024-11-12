@@ -16,3 +16,6 @@ Since this project is focused on learning TDD, it’s enough to generate the lin
 This sets us up to proceed methodically, addressing one part of the task at a time.
 
 ---
+
+1. Create 7 objects
+    1. First, let's create a simple initial test to check that there are 7 lines.

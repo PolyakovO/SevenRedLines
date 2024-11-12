@@ -7,7 +7,9 @@ namespace SevenRedLines.Core.Tests
         [Fact]
         public void DraftTest()
         {
-            Assert.True(true);
+            var redLineGenerator = new RedLineGenerator();
+            var redLines = redLineGenerator.Generate();
+            Assert.Equal(7, redLines.Count);
         }
     }
 }
