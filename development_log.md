@@ -1,0 +1,18 @@
+# Development Log
+
+This task is challenging and a bit unclear, but there’s no need to be discouraged! We can solve each problem step-by-step. Let’s start with the first requirement:
+
+## 1. Draw 7 red lines
+
+Since this project is focused on learning TDD, it’s enough to generate the lines as objects, leaving the actual drawing to any compatible system. Here’s how we’ll break this down:
+
+1. Create 7 objects
+2. Create 1 red line
+    1. Determine what a "line" is in this context
+    2. Define what "red" means
+    3. Finally, create 7 red lines
+---
+
+This sets us up to proceed methodically, addressing one part of the task at a time.
+
+---
