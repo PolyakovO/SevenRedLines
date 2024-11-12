@@ -18,4 +18,5 @@ This sets us up to proceed methodically, addressing one part of the task at a ti
 ---
 
 1. Create 7 objects
-    1. First, let's create a simple initial test to check that there are 7 lines.
+    1. First, let's create a simple initial test to check that there are 7 lines. Red.
+    2. Let's make the test build. Still Red.
