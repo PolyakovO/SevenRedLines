@@ -7,9 +7,10 @@ namespace SevenRedLines.Core.Tests
         [Fact]
         public void Generate_ShouldCreateSeven()
         {
+            const int redLinesCount = 7;
             var redLineGenerator = new RedLineGenerator();
             var redLines = redLineGenerator.Generate();
-            Assert.Equal(7, redLines.Count);
+            Assert.Equal(redLinesCount, redLines.Count);
         }
     }
 
