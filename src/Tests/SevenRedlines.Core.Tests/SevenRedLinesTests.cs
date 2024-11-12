@@ -7,12 +7,13 @@ namespace SevenRedLines.Core.Tests
         [Theory]
         [InlineData(7)]
         [InlineData(5)]
+        //We can disallow passing zero and add an exception. For simplicity, we'll leave the collection empty.
         [InlineData(0)]
-        public void Generate_ShouldCreateSeven(uint redLinesCount)
+        public void Generate_ShouldCreateCount(uint redLinesCount)
         {
             var redLineGenerator = new RedLineGenerator();
             var redLines = redLineGenerator.Generate(redLinesCount);
-            Assert.Equal(redLinesCount, redLines.Count);
+            Assert.Equal(redLinesCount, (uint)redLines.Count);
         }
     }
 
