@@ -5,7 +5,9 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SevenRedLines.Core", "SevenRedLinesCore\SevenRedLines.Core.csproj", "{5BEE2AA6-FB49-45DC-BD80-64A9F243D431}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenRedLines.Core.Tests", "Tests\SevenRedlines.Core.Tests\SevenRedLines.Core.Tests.csproj", "{B715E98C-3175-4454-A94D-10EF138563D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SevenRedLines.Core.Tests", "Tests\SevenRedlines.Core.Tests\SevenRedLines.Core.Tests.csproj", "{B715E98C-3175-4454-A94D-10EF138563D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenRedLinesViewApp", "SevenRedLinesViewApp\SevenRedLinesViewApp.csproj", "{86989CA8-FFF2-47EF-A75E-6FEC6A537E99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B715E98C-3175-4454-A94D-10EF138563D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B715E98C-3175-4454-A94D-10EF138563D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B715E98C-3175-4454-A94D-10EF138563D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86989CA8-FFF2-47EF-A75E-6FEC6A537E99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86989CA8-FFF2-47EF-A75E-6FEC6A537E99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86989CA8-FFF2-47EF-A75E-6FEC6A537E99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86989CA8-FFF2-47EF-A75E-6FEC6A537E99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

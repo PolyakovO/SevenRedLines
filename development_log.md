@@ -41,4 +41,8 @@ For now, we’ll keep it simple and stick with this approach.
 
 Starting with a test again!
 
+1. Test for the RedLine constructor
+2. Change  code to make the test green.
+
+
 -----
