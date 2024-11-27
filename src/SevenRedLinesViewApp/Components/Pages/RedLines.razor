@@ -1,9 +1,27 @@
 ﻿@page "/"
+@using SevenRedLines.Core
 
 <PageTitle>RedLines</PageTitle>
 
-<svg height="20" width="200">
-    <line x1="0" y1="10" x2="200" y2="10" style="stroke:red;stroke-width:2" />
+<svg width="500" height="500" style="border: 1px solid black;">
+    @foreach (var line in _lines)
+    {
+        <line x1="@line.X1" y1="@line.Y1" x2="@line.X2" y2="@line.Y2"
+              stroke="black" stroke-width="2" />
+    }
 </svg>
+
+<button class="btn btn-primary" @onclick="DrawLines">Draw lines</button>
+@code
+{
+    private const uint LineCount = 7;
+    
+    private IReadOnlyCollection<RedLine> _lines = new List<RedLine>();
+    private readonly RedLineGenerator _generator = new();
+    public void DrawLines()
+    {
+        _lines = _generator.Generate(LineCount);
+    }
+}
 
 
