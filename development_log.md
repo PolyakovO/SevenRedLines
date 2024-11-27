@@ -42,7 +42,9 @@ For now, we’ll keep it simple and stick with this approach.
 Starting with a test again!
 
 1. Test for the RedLine constructor
-2. Change  code to make the test green.
+2. Change  code to make the test green.  
+ * A simple line-drawing project  has been added. It will help us understand how our lines can be rendered. The details of working on this part of the project will not be documented in this log, and all related commits will be marked with gui.
+
 
 
 -----
