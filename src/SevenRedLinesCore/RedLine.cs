@@ -22,9 +22,10 @@ public class RedLine
     public override bool Equals(object? obj)
     {
         if (obj is not RedLine other)
-        {
             return false;
-        }
+
+        if (ReferenceEquals(this, obj))
+            return true;
 
         return (X1 == other.X1 && Y1 == other.Y1 && X2 == other.X2 && Y2 == other.Y2) ||
                (X1 == other.X2 && Y1 == other.Y2 && X2 == other.X1 && Y2 == other.Y1);
