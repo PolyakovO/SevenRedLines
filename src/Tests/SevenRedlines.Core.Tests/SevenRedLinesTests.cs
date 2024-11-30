@@ -4,6 +4,7 @@ namespace SevenRedLines.Core.Tests
 {
     public class SevenRedLinesTests
     {
+        private const uint RedLinesDefaultCount = 7;
         [Theory]
         [InlineData(7)]
         [InlineData(5)]
@@ -39,6 +40,30 @@ namespace SevenRedLines.Core.Tests
         public void Constructor_AllCoordinatesTheSame_ShouldTrowsArgumentException(int x1, int y1, int x2, int y2)
         {
             Assert.Throws<ArgumentException>(() => new RedLine(x1, y1, x2, y2));
+        }
+
+
+
+        [Fact]
+        public void Generate_ShouldNotContainDuplicateLines()
+        {
+            var redLineGenerator = new RedLineGenerator();
+            var redLines = redLineGenerator.Generate(RedLinesDefaultCount);
+            var hasDuplicates = redLines.Distinct().Count() != redLines.Count;
+            Assert.False(hasDuplicates);
+        }
+
+        [Theory]
+        [InlineData(1, 2, 3, 4, true)]
+        [InlineData(2, 2, 3, 4, false)]
+        [InlineData(3, 4, 1, 2, true)]
+
+        public void EqualsAndHashCode_ShouldConsiderDirection(int x1, int y1, int x2, int y2, bool result)
+        {
+            var redLine1 = new RedLine(x1, y1, x2, y2);
+            var redLine2 = new RedLine(1, 2, 3, 4);
+            Assert.Equal(result, redLine1.Equals(redLine2));
+            Assert.Equal(result, redLine1.GetHashCode() == redLine2.GetHashCode());
         }
     }
 }

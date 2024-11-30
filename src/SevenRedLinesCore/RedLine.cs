@@ -18,4 +18,20 @@ public class RedLine
         X2 = x2;
         Y2 = y2;
     }
+
+    public override bool Equals(object? obj)
+    {
+        if (obj is not RedLine other)
+        {
+            return false;
+        }
+
+        return (X1 == other.X1 && Y1 == other.Y1 && X2 == other.X2 && Y2 == other.Y2) ||
+               (X1 == other.X2 && Y1 == other.Y2 && X2 == other.X1 && Y2 == other.Y1);
+    }
+
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(X1, Y1, X2, Y2) ^ HashCode.Combine(X2, Y2, X1, Y1);
+    }
 }

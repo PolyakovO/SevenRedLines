@@ -43,8 +43,15 @@ Starting with a test again!
 
 1. Test for the RedLine constructor
 2. Change  code to make the test green.  
- * A simple line-drawing project  has been added. It will help us understand how our lines can be rendered. The details of working on this part of the project will not be documented in this log, and all related commits will be marked with gui.
+   * A simple line-drawing project  has been added. It will help us understand how our lines can be rendered. The details of working on this part of the project will not be documented in this log, and all related commits will be marked with gui.
 3. We haven’t created a proper line yet since all coordinates are currently set to 0. Let’s add a check to ensure a line cannot have a length of 0 (i.e., it cannot be just a point). Moving forward, we’ll simplify things by committing all changes in a single commit. However, we’ll still follow the process: writing tests first, or while writing them (e.g., adding missing properties), we’ll adjust the code.
+4. In the previous step, we finally created a LINE! And we even drew it. But it’s just one line, not seven!
+   * Let’s add a test: _Generate_ShouldNotContainDuplicateLines_. It immediately passes (green), but we forgot about Equals!
+   *  Let’s think about what equality means for lines. Lines are equal if their points are the same in any direction. Don’t forget about GetHashCode. Test name is _EqualsAndHashCode_ShouldConsiderDirection_
+   We’ll write a test first and then add the methods to the class.
+   * Now Generate_ShouldNotContainDuplicateLines has failed (red). Let’s modify the Generate method to make it pass.
+   For now, we’ll keep these magic numbers in _Generate_, as we know there are upcoming steps that will require specific positioning. 
+
 
 
 
