@@ -1,13 +1,13 @@
 ﻿@page "/"
 @using SevenRedLines.Core
-
+@rendermode InteractiveServer
 <PageTitle>RedLines</PageTitle>
 
 <svg width="500" height="500" style="border: 1px solid black;">
     @foreach (var line in _lines)
     {
         <line x1="@line.X1" y1="@line.Y1" x2="@line.X2" y2="@line.Y2"
-              stroke="black" stroke-width="2" />
+              stroke="red" stroke-width="2"/>
     }
 </svg>
 
@@ -15,10 +15,10 @@
 @code
 {
     private const uint LineCount = 7;
-    
+
     private IReadOnlyCollection<RedLine> _lines = new List<RedLine>();
     private readonly RedLineGenerator _generator = new();
-    public void DrawLines()
+    private void DrawLines()
     {
         _lines = _generator.Generate(LineCount);
     }

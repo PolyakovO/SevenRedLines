@@ -7,7 +7,7 @@
             var redLines = new RedLine[redLinesCount];
             for (var i = 0; i < redLinesCount; i++)
             {
-                redLines[i] = new RedLine(0, 0, 0, 0);
+                redLines[i] = new RedLine(0, 0, 500, 500);
             }
             return redLines;
 

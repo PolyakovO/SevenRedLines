@@ -44,6 +44,7 @@ Starting with a test again!
 1. Test for the RedLine constructor
 2. Change  code to make the test green.  
  * A simple line-drawing project  has been added. It will help us understand how our lines can be rendered. The details of working on this part of the project will not be documented in this log, and all related commits will be marked with gui.
+3. We haven’t created a proper line yet since all coordinates are currently set to 0. Let’s add a check to ensure a line cannot have a length of 0 (i.e., it cannot be just a point). Moving forward, we’ll simplify things by committing all changes in a single commit. However, we’ll still follow the process: writing tests first, or while writing them (e.g., adding missing properties), we’ll adjust the code.
 
 
 

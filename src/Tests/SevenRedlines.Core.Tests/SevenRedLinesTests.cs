@@ -32,6 +32,14 @@ namespace SevenRedLines.Core.Tests
             Assert.Equal(x2, redLine.X2);
             Assert.Equal(y2, redLine.Y2);
         }
+
+        [Theory]
+        [InlineData(0, 0, 0, 0)]
+        [InlineData(1, 2, 1, 2)]
+        public void Constructor_AllCoordinatesTheSame_ShouldTrowsArgumentException(int x1, int y1, int x2, int y2)
+        {
+            Assert.Throws<ArgumentException>(() => new RedLine(x1, y1, x2, y2));
+        }
     }
 }
 
