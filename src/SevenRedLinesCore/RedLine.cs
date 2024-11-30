@@ -34,4 +34,15 @@ public class RedLine
     {
         return HashCode.Combine(X1, Y1, X2, Y2) ^ HashCode.Combine(X2, Y2, X1, Y1);
     }
+
+    public bool IsPerpendicularTo(RedLine other)
+    {
+        var dx1 = X2 - X1;
+        var dy1 = Y2 - Y1;
+
+        var dx2 = other.X2 - other.X1;
+        var dy2 = other.Y2 - other.Y1;
+
+        return dx1 * dx2 + dy1 * dy2 == 0;
+    }
 }

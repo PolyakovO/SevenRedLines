@@ -51,6 +51,9 @@ Starting with a test again!
    We’ll write a test first and then add the methods to the class.
    * Now Generate_ShouldNotContainDuplicateLines has failed (red). Let’s modify the Generate method to make it pass.
    For now, we’ll keep these magic numbers in _Generate_, as we know there are upcoming steps that will require specific positioning. 
+5. Let's write a test that checks that Generate returns N perpendicular lines. We will test it for both 7 and 2 lines.Both tests should be red! Then, let's try to write the code so that the test with 2 lines turns green. 
+   * First, we need the IsPerpendicularTo method. Again, we'll write the test first, then the code (a bit of Google and math will help us).
+   * Second, we will modify the Generate method as it comes to mind, so that it works at least for two lines. We will create each new line perpendicular to the previous one. The test for 2 lines turned green, but 7 is still red. Let's leave this problem for the next step.
 
 
 

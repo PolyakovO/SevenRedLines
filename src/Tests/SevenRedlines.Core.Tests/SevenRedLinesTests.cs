@@ -63,8 +63,39 @@ namespace SevenRedLines.Core.Tests
             var redLine1 = new RedLine(x1, y1, x2, y2);
             var redLine2 = new RedLine(1, 2, 3, 4);
             Assert.Equal(result, redLine1.Equals(redLine2));
+            Assert.Equal(result, redLine1.Equals(redLine2));
             Assert.Equal(result, redLine1.GetHashCode() == redLine2.GetHashCode());
         }
+
+        [Theory]
+        [InlineData(7)]
+        [InlineData(2)]
+        public void Generate_ShouldCreatePerpendicularLines(uint redLinesCount)
+        {
+            var redLineGenerator = new RedLineGenerator();
+            var redLines = redLineGenerator.Generate(redLinesCount).ToArray();
+            for (var i = 0; i < redLines.Length; i++)
+            {
+                for (var j = i + 1; j < redLines.Length; j++)
+                {
+                    Assert.True(redLines[i].IsPerpendicularTo(redLines[j]));
+                }
+            }
+
+        }
+
+        [Theory]
+        [InlineData(0, 0, 0, 1, true)]
+        [InlineData(0, 0, 2, 2, false)]
+        public void IsParallelTo_ShouldReturnCorrectResult(int x1, int y1, int x2, int y2, bool result)
+        {
+            var redLine1 = new RedLine(0, 0, 1, 0);
+            var redLine2 = new RedLine(x1, y1, x2, y2);
+
+            Assert.Equal(result, redLine1.IsPerpendicularTo(redLine2));
+        }
+
+
     }
 }
 
